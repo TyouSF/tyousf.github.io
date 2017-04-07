@@ -106,13 +106,15 @@
 
 
 <meta name="description" content="Appium是一个自动化测试开源工具，支持 iOS 平台和 Android 平台上的原生应用，web 应用和混合应用。
-Appium">
+Appium
+TyouSF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Appium 基础">
 <meta property="og:url" content="http://yoursite.com/2017/04/05/Appium 基础/index.html">
 <meta property="og:site_name" content="TyouSF">
 <meta property="og:description" content="Appium是一个自动化测试开源工具，支持 iOS 平台和 Android 平台上的原生应用，web 应用和混合应用。
-Appium">
+Appium
+TyouSF">
 <meta property="og:image" content="http://yoursite.com/2017/04/05/Appium%20基础/appium1.png">
 <meta property="og:image" content="http://yoursite.com/2017/04/05/Appium%20基础/JDK1.png">
 <meta property="og:image" content="http://yoursite.com/2017/04/05/Appium%20基础/JDK2.png">
@@ -135,11 +137,14 @@ Appium">
 <meta property="og:image" content="http://yoursite.com/2017/04/05/Appium%20基础/appium9.png">
 <meta property="og:image" content="http://yoursite.com/2017/04/05/Appium%20基础/appium10.png">
 <meta property="og:image" content="http://yoursite.com/2017/04/05/Appium%20基础/appium11.png">
-<meta property="og:updated_time" content="2017-04-06T08:27:01.000Z">
+<meta property="og:image" content="http://yoursite.com/2017/04/05/Appium%20基础/appium12.png">
+<meta property="og:image" content="http://yoursite.com/2017/04/05/Appium%20基础/appium13.png">
+<meta property="og:updated_time" content="2017-04-07T08:15:31.503Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Appium 基础">
 <meta name="twitter:description" content="Appium是一个自动化测试开源工具，支持 iOS 平台和 Android 平台上的原生应用，web 应用和混合应用。
-Appium">
+Appium
+TyouSF">
 <meta name="twitter:image" content="http://yoursite.com/2017/04/05/Appium%20基础/appium1.png">
 
 
@@ -444,6 +449,7 @@ Appium">
         <img src="/2017/04/05/Appium%20基础/appium1.png" alt="Appium" title="Appium">
 <blockquote class="blockquote-center"><p>Appium是一个自动化测试开源工具，支持 iOS 平台和 Android 平台上的原生应用，web 应用和混合应用。</p>
 <p>Appium</p>
+<p>TyouSF</p>
 </blockquote>
 <a id="more"></a>
 <hr>
@@ -548,12 +554,24 @@ Appium">
 <img src="/2017/04/05/Appium%20基础/appium6.png" alt="appium6.png" title="">
 <img src="/2017/04/05/Appium%20基础/appium7.png" alt="appium7.png" title="">
 <img src="/2017/04/05/Appium%20基础/appium8.png" alt="appium8.png" title="">
-<h3 id="校验-2"><a href="#校验-2" class="headerlink" title="校验"></a>校验</h3><p>启动Appium，正常启动后，则展示如下：</p>
+<h3 id="校验-2"><a href="#校验-2" class="headerlink" title="校验"></a>校验</h3><h4 id="通过Appium客户端校验"><a href="#通过Appium客户端校验" class="headerlink" title="通过Appium客户端校验"></a>通过Appium客户端校验</h4><p>启动Appium，正常启动后，则展示如下：</p>
 <img src="/2017/04/05/Appium%20基础/appium9.png" alt="appium9.png" title="">
-<p>但是这并不能证明我们的Appium整体环境是否已经搭建成功。接下来，我们在启动Appium后，选择执行Appium按钮之后，如果无异常，应当是如下图所示这样：</p>
-<img src="/2017/04/05/Appium%20基础/appium10.png" alt="appium10.png" title="">
-<img src="/2017/04/05/Appium%20基础/appium11.png" alt="appium11.png" title="">
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>相信只要按照本文所述的顺序，进行基本的环境搭建，都应当不会有太大问题。至此，恭喜正在搭建此环境的你，已经成功开启了Appium之旅。接下来，让我们一起看看如何利用‘Python’语言完成我们第一个自动化测试安卓App的Demo脚本吧！</p>
+<p>但是这并不能证明我们的Appium整体环境是否已经搭建成功。接下来，我们在启动Appium后，选择执行Appium按钮之后，如果无异常，应当是如下图所示这样：<br><img src="/2017/04/05/Appium%20基础/appium10.png" alt="appium10.png" title=""><br><img src="/2017/04/05/Appium%20基础/appium11.png" alt="appium11.png" title=""></p>
+<h4 id="通过appium-doctor命令校验"><a href="#通过appium-doctor命令校验" class="headerlink" title="通过appium-doctor命令校验"></a>通过<code>appium-doctor</code>命令校验</h4><p>如果您在看本篇教程之前，有看过他人写的一些文章的话，您可能会接触到这样一条校验appium环境是否搭建成功的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">appium-doctor</div></pre></td></tr></table></figure></p>
+<p>关于这条命令，并不是所有人都可以直接执行的。首先如果是通过NPM的命令来安装appium的话，笔者并不是很清楚是否可以执行。但是假设您是跟着本教程通过Win下的安装包完成安装的，那么恭喜您：这条命令您并不能直接在Win的命令提示符下执行。执行的时候Win会提示我们这并不是内部或外部命令。<br>原因：</p>
+<ul>
+<li>很简单，安装包完成安装后，并没有进行相关环境变量的配置</li>
+</ul>
+<p>那么接下来，我们一起看看如何让<code>appium-doctor</code>成功运行：</p>
+<ol>
+<li><strong>寻找“appium-doctor”</strong><br>进入到您安装Appium的目中 –》 会看到有一个文件夹名称为：“node_modules” –》 进入“node_modules”后，会看到有个文件夹名称为：“.bin” –》 进入到“.bin”目录中，您便会发现有一个“appium-doctor.cmd”的文件，恭喜您已经找到了！</li>
+<li><strong>配置“appium-doctor”到环境变量”</strong><br>将步骤1中“appium-doctor.cmd”的目录进行复制，就像这样一个地址：E:\Appium\node_modules.bin（具体按照您实际安装的目录进行修改！）。之后进入系统环境变量的Path中进行添加，如图：<img src="/2017/04/05/Appium%20基础/appium12.png" alt="appium12.png" title=""></li>
+<li><strong>Win命令提示符下的校验</strong><br>配置后，在Win命令提示符中输入<code>appium-doctor</code>，如果出现类似下图结果：则证明环境成功搭建完毕。（有任何不成功的，都将会标红并提示出具体还缺少什么环境）<img src="/2017/04/05/Appium%20基础/appium13.png" alt="appium13.png" title="">
+</li>
+</ol>
+<hr>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><hr>
+<p>相信只要按照本文所述的顺序，进行基本的环境搭建，都应当不会有太大问题。至此，恭喜正在搭建此环境的你，已经成功开启了Appium之旅。接下来，让我们一起看看如何利用‘Python’语言完成我们第一个自动化测试安卓App的Demo脚本吧！</p>
 <p>相关学习资料如下（坚持学习，您将能够获得更多的收获）：</p>
 <blockquote>
 <p><a href="http://www.runoob.com/python3/python3-tutorial.html" target="_blank" rel="external">Python3 中文教程</a><br><a href="http://appium.io/slate/cn/master/?python#about-appium" target="_blank" rel="external">Appium 中文文档</a><br><a href="https://developer.android.com/studio/command-line/adb.html?hl=zh-cn" target="_blank" rel="external">Android 调试桥</a></p>
@@ -680,7 +698,7 @@ Appium">
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -702,7 +720,7 @@ Appium">
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -748,7 +766,7 @@ Appium">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Appium-介绍"><span class="nav-number">1.</span> <span class="nav-text">Appium 介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Appium理念"><span class="nav-number">1.1.</span> <span class="nav-text">Appium理念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Appium框架"><span class="nav-number">1.2.</span> <span class="nav-text">Appium框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概念注解"><span class="nav-number">1.3.</span> <span class="nav-text">概念注解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#C-S-架构"><span class="nav-number">1.3.1.</span> <span class="nav-text">C/S 架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Session"><span class="nav-number">1.3.2.</span> <span class="nav-text">Session</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Desired-Capabilities"><span class="nav-number">1.3.3.</span> <span class="nav-text">Desired Capabilities</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Appium-Server"><span class="nav-number">1.3.4.</span> <span class="nav-text">Appium Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Appium-Client"><span class="nav-number">1.3.5.</span> <span class="nav-text">Appium Client</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Appium-安装"><span class="nav-number">2.</span> <span class="nav-text">Appium 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA-JDK"><span class="nav-number">2.1.</span> <span class="nav-text">JAVA JDK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">2.1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">2.1.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验"><span class="nav-number">2.1.3.</span> <span class="nav-text">校验</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android-Studio"><span class="nav-number">2.2.</span> <span class="nav-text">Android Studio</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Adb"><span class="nav-number">2.2.2.</span> <span class="nav-text">配置Adb</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验adb"><span class="nav-number">2.2.3.</span> <span class="nav-text">校验adb</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js"><span class="nav-number">2.3.</span> <span class="nav-text">Node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验-1"><span class="nav-number">2.3.2.</span> <span class="nav-text">校验</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Appium"><span class="nav-number">2.4.</span> <span class="nav-text">Appium</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-3"><span class="nav-number">2.4.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验-2"><span class="nav-number">2.4.2.</span> <span class="nav-text">校验</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Appium-介绍"><span class="nav-number">1.</span> <span class="nav-text">Appium 介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Appium理念"><span class="nav-number">1.1.</span> <span class="nav-text">Appium理念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Appium框架"><span class="nav-number">1.2.</span> <span class="nav-text">Appium框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概念注解"><span class="nav-number">1.3.</span> <span class="nav-text">概念注解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#C-S-架构"><span class="nav-number">1.3.1.</span> <span class="nav-text">C/S 架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Session"><span class="nav-number">1.3.2.</span> <span class="nav-text">Session</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Desired-Capabilities"><span class="nav-number">1.3.3.</span> <span class="nav-text">Desired Capabilities</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Appium-Server"><span class="nav-number">1.3.4.</span> <span class="nav-text">Appium Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Appium-Client"><span class="nav-number">1.3.5.</span> <span class="nav-text">Appium Client</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Appium-安装"><span class="nav-number">2.</span> <span class="nav-text">Appium 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA-JDK"><span class="nav-number">2.1.</span> <span class="nav-text">JAVA JDK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">2.1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">2.1.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验"><span class="nav-number">2.1.3.</span> <span class="nav-text">校验</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android-Studio"><span class="nav-number">2.2.</span> <span class="nav-text">Android Studio</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Adb"><span class="nav-number">2.2.2.</span> <span class="nav-text">配置Adb</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验adb"><span class="nav-number">2.2.3.</span> <span class="nav-text">校验adb</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js"><span class="nav-number">2.3.</span> <span class="nav-text">Node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验-1"><span class="nav-number">2.3.2.</span> <span class="nav-text">校验</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Appium"><span class="nav-number">2.4.</span> <span class="nav-text">Appium</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-3"><span class="nav-number">2.4.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验-2"><span class="nav-number">2.4.2.</span> <span class="nav-text">校验</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通过Appium客户端校验"><span class="nav-number">2.4.2.1.</span> <span class="nav-text">通过Appium客户端校验</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过appium-doctor命令校验"><span class="nav-number">2.4.2.2.</span> <span class="nav-text">通过appium-doctor命令校验</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
             
 
           </div>
