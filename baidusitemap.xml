@@ -4,26 +4,131 @@
 
     
   <url>
+    <loc>https://tyousf.github.io/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2017-04-14T10:21:13.516Z</lastmod>
+    <data>
+        <display>
+        <title>Git常用命令汇总</title>
+        <pubTime>2017-04-14T06:59:45.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="https://tyousf.github.io/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tyousf.github.io/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84SEO/</loc>
-    <lastmod>2017-04-13T09:44:51.642Z</lastmod>
+    <lastmod>2017-04-14T10:20:02.316Z</lastmod>
     <data>
         <display>
         <title>Hexo博客的SEO</title>
         <pubTime>2017-04-12T09:03:16.000Z</pubTime>
         
-        <tag>Hexo</tag>
+        <tag>hexo</tag>
          
-        <tag>NexT</tag>
+        <tag>next</tag>
          
-        <tag>SEO</tag>
+        <tag>seo</tag>
          
          
            
              
               <breadCrumb title="Hexo" url="https://tyousf.github.io/categories/Hexo/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tyousf.github.io/GitHub-Pages-Hexo-NexT-%E5%BF%AB%E9%80%9F%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81Blog/</loc>
+    <lastmod>2017-04-14T10:19:31.484Z</lastmod>
+    <data>
+        <display>
+        <title>GitHub Pages + Hexo & NexT 快速构建静态Blog</title>
+        <pubTime>2017-03-30T08:46:19.000Z</pubTime>
+        
+        <tag>github pages</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>next</tag>
+         
+         
+           
              
-              <breadCrumb title="SEO" url="https://tyousf.github.io/categories/Hexo/SEO/"/>
+              <breadCrumb title="Hexo" url="https://tyousf.github.io/categories/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tyousf.github.io/Appium-Demo-%E4%B8%8B%E7%AF%87/</loc>
+    <lastmod>2017-04-14T09:46:06.514Z</lastmod>
+    <data>
+        <display>
+        <title>Appium Demo 下篇</title>
+        <pubTime>2017-04-07T08:11:25.000Z</pubTime>
+        
+        <tag>appium</tag>
+         
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Appium" url="https://tyousf.github.io/categories/Appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tyousf.github.io/Appium-Demo-%E4%B8%8A%E7%AF%87/</loc>
+    <lastmod>2017-04-14T09:45:51.250Z</lastmod>
+    <data>
+        <display>
+        <title>Appium Demo 上篇</title>
+        <pubTime>2017-04-06T08:28:50.000Z</pubTime>
+        
+        <tag>appium</tag>
+         
+        <tag>android avd</tag>
+         
+         
+           
+             
+              <breadCrumb title="Appium" url="https://tyousf.github.io/categories/Appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tyousf.github.io/Appium%20%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2017-04-14T09:45:37.555Z</lastmod>
+    <data>
+        <display>
+        <title>Appium 基础</title>
+        <pubTime>2017-04-05T02:54:54.000Z</pubTime>
+        
+        <tag>appium</tag>
+         
+         
+           
+             
+              <breadCrumb title="Appium" url="https://tyousf.github.io/categories/Appium/"/>
           
         </display>
     </data>
@@ -42,88 +147,6 @@
            
              
               <breadCrumb title="Hexo" url="https://tyousf.github.io/categories/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://tyousf.github.io/GitHub-Pages-Hexo-NexT-%E5%BF%AB%E9%80%9F%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81Blog/</loc>
-    <lastmod>2017-04-11T10:19:22.269Z</lastmod>
-    <data>
-        <display>
-        <title>GitHub Pages + Hexo & NexT 快速构建静态Blog</title>
-        <pubTime>2017-03-30T08:46:19.000Z</pubTime>
-        
-        <tag>GitHub Pages</tag>
-         
-        <tag>Hexo</tag>
-         
-        <tag>NexT</tag>
-         
-         
-           
-             
-              <breadCrumb title="GitHub Pages + Hexo &amp; NexT" url="https://tyousf.github.io/categories/GitHub-Pages-Hexo-NexT/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://tyousf.github.io/Appium-Demo-%E4%B8%8B%E7%AF%87/</loc>
-    <lastmod>2017-04-11T10:19:15.399Z</lastmod>
-    <data>
-        <display>
-        <title>Appium Demo 下篇</title>
-        <pubTime>2017-04-07T08:11:25.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Appium" url="https://tyousf.github.io/categories/Appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://tyousf.github.io/Appium-Demo-%E4%B8%8A%E7%AF%87/</loc>
-    <lastmod>2017-04-11T10:19:09.635Z</lastmod>
-    <data>
-        <display>
-        <title>Appium Demo 上篇</title>
-        <pubTime>2017-04-06T08:28:50.000Z</pubTime>
-        
-        <tag>Android AVD</tag>
-         
-         
-           
-             
-              <breadCrumb title="Appium" url="https://tyousf.github.io/categories/Appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://tyousf.github.io/Appium%20%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2017-04-11T10:18:58.252Z</lastmod>
-    <data>
-        <display>
-        <title>Appium 基础</title>
-        <pubTime>2017-04-05T02:54:54.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="Appium" url="https://tyousf.github.io/categories/Appium/"/>
           
         </display>
     </data>
