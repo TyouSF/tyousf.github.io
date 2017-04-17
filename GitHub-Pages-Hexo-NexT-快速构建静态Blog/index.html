@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="github pages,hexo,next," />
+  <meta name="keywords" content="hexo,next,github pages," />
 
 
 
@@ -141,8 +141,8 @@ NexT">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
-    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -558,11 +558,11 @@ message:
       
         <div class="post-tags">
           
-            <a href="/tags/github-pages/" rel="tag"># github pages</a>
-          
             <a href="/tags/hexo/" rel="tag"># hexo</a>
           
             <a href="/tags/next/" rel="tag"># next</a>
+          
+            <a href="/tags/github-pages/" rel="tag"># github pages</a>
           
         </div>
       
@@ -763,7 +763,7 @@ message:
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -777,6 +777,8 @@ message:
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -802,10 +804,9 @@ message:
   
 
 
+  
 
 
-  
-  
 
 
 
@@ -828,10 +829,7 @@ message:
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
   
-  <script type="text/javascript" src="/lib/three/three.min.js"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
@@ -845,6 +843,13 @@ message:
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
