@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>https://tyousf.github.io/Python3-%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2017-04-24T08:26:24.671Z</lastmod>
+    <loc>https://tyousf.github.io/Python3-%E7%AE%80%E6%98%8E%E7%BA%B2%E9%A2%86/</loc>
+    <lastmod>2017-04-25T08:18:15.843Z</lastmod>
     <data>
         <display>
-        <title>Python3 环境</title>
-        <pubTime>2017-04-24T06:51:24.000Z</pubTime>
+        <title>Python3 简明纲领</title>
+        <pubTime>2017-04-21T08:25:22.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -24,12 +24,32 @@
 
     
   <url>
-    <loc>https://tyousf.github.io/Python3-%E7%AE%80%E6%98%8E%E7%BA%B2%E9%A2%86/</loc>
-    <lastmod>2017-04-24T08:25:06.493Z</lastmod>
+    <loc>https://tyousf.github.io/Python3-%E6%95%B0%E5%AD%97/</loc>
+    <lastmod>2017-04-25T08:16:27.747Z</lastmod>
     <data>
         <display>
-        <title>Python3 简明纲领</title>
-        <pubTime>2017-04-21T08:25:22.000Z</pubTime>
+        <title>Python3 数字</title>
+        <pubTime>2017-04-25T06:49:20.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://tyousf.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tyousf.github.io/Python3-%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2017-04-24T08:26:24.671Z</lastmod>
+    <data>
+        <display>
+        <title>Python3 环境</title>
+        <pubTime>2017-04-24T06:51:24.000Z</pubTime>
         
         <tag>python</tag>
          
