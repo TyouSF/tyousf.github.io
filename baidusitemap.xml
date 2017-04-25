@@ -4,6 +4,76 @@
 
     
   <url>
+    <loc>https://tyousf.github.io/Appium-Demo-%E4%B8%8B%E7%AF%87/</loc>
+    <lastmod>2017-04-25T09:47:51.585Z</lastmod>
+    <data>
+        <display>
+        <title>Appium Demo 下篇</title>
+        <pubTime>2017-04-07T08:11:25.000Z</pubTime>
+        
+        <tag>appium</tag>
+         
+        <tag>测试</tag>
+         
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Appium" url="https://tyousf.github.io/categories/Appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tyousf.github.io/Appium-Demo-%E4%B8%8A%E7%AF%87/</loc>
+    <lastmod>2017-04-25T09:47:40.353Z</lastmod>
+    <data>
+        <display>
+        <title>Appium Demo 上篇</title>
+        <pubTime>2017-04-06T08:28:50.000Z</pubTime>
+        
+        <tag>appium</tag>
+         
+        <tag>测试</tag>
+         
+        <tag>android avd</tag>
+         
+         
+           
+             
+              <breadCrumb title="Appium" url="https://tyousf.github.io/categories/Appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tyousf.github.io/Appium%20%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2017-04-25T09:47:32.385Z</lastmod>
+    <data>
+        <display>
+        <title>Appium 基础</title>
+        <pubTime>2017-04-05T02:54:54.000Z</pubTime>
+        
+        <tag>appium</tag>
+         
+        <tag>测试</tag>
+         
+         
+           
+             
+              <breadCrumb title="Appium" url="https://tyousf.github.io/categories/Appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tyousf.github.io/Python3-%E7%AE%80%E6%98%8E%E7%BA%B2%E9%A2%86/</loc>
     <lastmod>2017-04-25T08:18:15.843Z</lastmod>
     <data>
@@ -163,70 +233,6 @@
            
              
               <breadCrumb title="Hexo" url="https://tyousf.github.io/categories/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://tyousf.github.io/Appium-Demo-%E4%B8%8B%E7%AF%87/</loc>
-    <lastmod>2017-04-14T09:46:06.514Z</lastmod>
-    <data>
-        <display>
-        <title>Appium Demo 下篇</title>
-        <pubTime>2017-04-07T08:11:25.000Z</pubTime>
-        
-        <tag>appium</tag>
-         
-        <tag>python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Appium" url="https://tyousf.github.io/categories/Appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://tyousf.github.io/Appium-Demo-%E4%B8%8A%E7%AF%87/</loc>
-    <lastmod>2017-04-14T09:45:51.250Z</lastmod>
-    <data>
-        <display>
-        <title>Appium Demo 上篇</title>
-        <pubTime>2017-04-06T08:28:50.000Z</pubTime>
-        
-        <tag>appium</tag>
-         
-        <tag>android avd</tag>
-         
-         
-           
-             
-              <breadCrumb title="Appium" url="https://tyousf.github.io/categories/Appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://tyousf.github.io/Appium%20%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2017-04-14T09:45:37.555Z</lastmod>
-    <data>
-        <display>
-        <title>Appium 基础</title>
-        <pubTime>2017-04-05T02:54:54.000Z</pubTime>
-        
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="Appium" url="https://tyousf.github.io/categories/Appium/"/>
           
         </display>
     </data>
