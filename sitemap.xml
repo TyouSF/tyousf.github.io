@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tyousf.github.io/about/index.html</loc>
+    
+    <lastmod>2017-04-27T07:54:47.381Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tyousf.github.io/Python3-%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
+    
+    <lastmod>2017-04-27T07:50:22.301Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tyousf.github.io/Python3-%E6%95%B0%E5%AD%97/</loc>
+    
+    <lastmod>2017-04-27T07:47:04.629Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tyousf.github.io/Python3-%E7%AE%80%E6%98%8E%E7%BA%B2%E9%A2%86/</loc>
+    
+    <lastmod>2017-04-26T06:25:22.224Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tyousf.github.io/Appium-Demo-%E4%B8%8B%E7%AF%87/</loc>
     
     <lastmod>2017-04-25T09:47:51.585Z</lastmod>
@@ -19,20 +47,6 @@
     <loc>https://tyousf.github.io/Appium%20%E5%9F%BA%E7%A1%80/</loc>
     
     <lastmod>2017-04-25T09:47:32.385Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tyousf.github.io/Python3-%E7%AE%80%E6%98%8E%E7%BA%B2%E9%A2%86/</loc>
-    
-    <lastmod>2017-04-25T08:18:15.843Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tyousf.github.io/Python3-%E6%95%B0%E5%AD%97/</loc>
-    
-    <lastmod>2017-04-25T08:16:27.747Z</lastmod>
     
   </url>
   
@@ -75,13 +89,6 @@
     <loc>https://tyousf.github.io/GitHub-Pages-Hexo-NexT-%E5%BF%AB%E9%80%9F%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81Blog/</loc>
     
     <lastmod>2017-04-14T10:19:31.484Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tyousf.github.io/about/index.html</loc>
-    
-    <lastmod>2017-04-01T06:41:24.108Z</lastmod>
     
   </url>
   
