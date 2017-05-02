@@ -3,10 +3,29 @@
 
 
     
+  <url>
+    <loc>https://tyousf.github.io/Python3-%E5%88%97%E8%A1%A8/</loc>
+    <lastmod>2017-05-02T03:08:08.460Z</lastmod>
+    <data>
+        <display>
+        <title>Python3 列表</title>
+        <pubTime>2017-04-28T08:40:18.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://tyousf.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>https://tyousf.github.io/Python3-%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
-    <lastmod>2017-04-27T07:50:22.301Z</lastmod>
+    <lastmod>2017-04-28T09:13:23.532Z</lastmod>
     <data>
         <display>
         <title>Python3 字符串</title>
@@ -23,6 +42,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>https://tyousf.github.io/Python3-%E6%95%B0%E5%AD%97/</loc>
