@@ -98,7 +98,7 @@
 <meta property="og:description" content="–本篇主要讲述 Python数据类型之：列表–
 “优雅”    “明确”    “简单”Python">
 <meta property="og:image" content="https://tyousf.github.io/Python3-列表/python.png">
-<meta property="og:updated_time" content="2017-05-02T03:21:12.255Z">
+<meta property="og:updated_time" content="2017-05-03T08:09:24.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python3 列表">
 <meta name="twitter:description" content="–本篇主要讲述 Python数据类型之：列表–
@@ -409,8 +409,8 @@
 <p>“优雅”    “明确”    “简单”<br>Python</p>
 </blockquote>
 <a id="more"></a>
-<p>Python中的数据类型：列表。并且<strong>列表数据类型支持原位改变。</strong><br>以方括号 <code>[ ]</code> 括起来，每个数据之间使用英文的逗号 ‘,’ 进行分隔的形式书写的字面值在Python中为列表数据类型。形如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; L = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, 1, 2, 3]</div><div class="line">&gt;&gt;&gt; type(L)</div><div class="line">&lt;class &apos;list&apos;&gt;</div></pre></td></tr></table></figure></p>
-<p>在Python中，列表数据类型英文称作：“ list ”</p>
+<p>Python中的数据类型：列表。并且<strong>列表数据类型支持原位改变</strong>。<br>以方括号 <code>[ ]</code> 括起来，每个数据之间使用英文的逗号 ‘,’ 进行分隔的形式书写的字面值在Python中为列表数据类型。形如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; L = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, 1, 2, 3]</div><div class="line">&gt;&gt;&gt; type(L)</div><div class="line">&lt;class &apos;list&apos;&gt;</div></pre></td></tr></table></figure></p>
+<p>在Python中，列表数据类型英文称作：“ list ”。</p>
 <p><strong>相关的方法等示例展示，均以Python的交互式环境演示为主！</strong></p>
 <hr>
 <h1 id="列表数据类型的特性"><a href="#列表数据类型的特性" class="headerlink" title="列表数据类型的特性"></a>列表数据类型的特性</h1><ol>
@@ -446,7 +446,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; L = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</div><div class="line">&gt;&gt;&gt; L[1]</div><div class="line">&apos;b&apos;</div></pre></td></tr></table></figure>
 </li>
 <li><p><code>list[x:y:z]</code> 列表的切片操作（索引由左至右，从0开始）<br>x：为切片起始索引<br>y：为切片结束索引（结果不包含y索引位置的值）<br>z：切片操作的步长</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; L = [1,2,3,4,5,6,7,8,9,10]</div><div class="line">&gt;&gt;&gt; L[::2]</div><div class="line">[1, 3, 5, 7, 9]</div><div class="line">&gt;&gt;&gt; L = [1,2,3,4,5,6,7,8,9,10]</div><div class="line">&gt;&gt;&gt; L[3:5]</div><div class="line">[4, 5]</div><div class="line">&gt;&gt;&gt; L[-1]</div><div class="line">10</div><div class="line">&gt;&gt;&gt; L[:]</div><div class="line">[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</div><div class="line">&gt;&gt;&gt; L[::2]</div><div class="line">[1, 3, 5, 7, 9]</div><div class="line">&gt;&gt;&gt; L[::-1]</div><div class="line">[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; L = [1,2,3,4,5,6,7,8,9,10]</div><div class="line">&gt;&gt;&gt; L[3:5]</div><div class="line">[4, 5]</div><div class="line">&gt;&gt;&gt; L[-1]</div><div class="line">10</div><div class="line">&gt;&gt;&gt; L[:]</div><div class="line">[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</div><div class="line">&gt;&gt;&gt; L[::2]</div><div class="line">[1, 3, 5, 7, 9]</div><div class="line">&gt;&gt;&gt; L[::-1]</div><div class="line">[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]</div></pre></td></tr></table></figure>
 </li>
 <li><p><code>in</code> 成员运算符 - 判断指定元素是否存在于列表内，存在则为 True， 反之为 False</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; L = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</div><div class="line">&gt;&gt;&gt; &apos;a&apos; in L</div><div class="line">True</div><div class="line">&gt;&gt;&gt; &apos;x&apos; in L</div><div class="line">False</div></pre></td></tr></table></figure>
@@ -561,6 +561,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/Python3-元组/" rel="prev" title="Python3 元组">
+                Python3 元组 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -633,7 +637,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
