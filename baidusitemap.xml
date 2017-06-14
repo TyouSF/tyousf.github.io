@@ -4,8 +4,68 @@
 
     
   <url>
+    <loc>https://tyousf.github.io/Python3-%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8A%EF%BC%89/</loc>
+    <lastmod>2017-06-14T09:30:14.536Z</lastmod>
+    <data>
+        <display>
+        <title>Python3 文件（上）</title>
+        <pubTime>2017-05-12T02:39:46.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://tyousf.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tyousf.github.io/Python3-%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8B%EF%BC%89/</loc>
+    <lastmod>2017-06-14T09:29:08.196Z</lastmod>
+    <data>
+        <display>
+        <title>Python3 文件（下）</title>
+        <pubTime>2017-05-14T02:39:46.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://tyousf.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tyousf.github.io/Python3-%E7%AE%80%E6%98%8E%E7%BA%B2%E9%A2%86/</loc>
+    <lastmod>2017-06-14T07:21:20.967Z</lastmod>
+    <data>
+        <display>
+        <title>Python3 简明纲领</title>
+        <pubTime>2017-04-21T08:25:22.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://tyousf.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tyousf.github.io/Python3-%E5%AD%97%E5%85%B8%E8%A1%A8/</loc>
-    <lastmod>2017-05-10T08:32:16.435Z</lastmod>
+    <lastmod>2017-06-14T06:17:14.681Z</lastmod>
     <data>
         <display>
         <title>Python3 字典表</title>
@@ -30,26 +90,6 @@
         <display>
         <title>Python3 列表</title>
         <pubTime>2017-04-28T08:40:18.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tyousf.github.io/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://tyousf.github.io/Python3-%E7%AE%80%E6%98%8E%E7%BA%B2%E9%A2%86/</loc>
-    <lastmod>2017-05-10T07:16:07.438Z</lastmod>
-    <data>
-        <display>
-        <title>Python3 简明纲领</title>
-        <pubTime>2017-04-21T08:25:22.000Z</pubTime>
         
         <tag>python</tag>
          
