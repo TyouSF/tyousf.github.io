@@ -1,0 +1,1084 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="P5fxU9id-Qu8QsllS5srHhr41ylt3iYcRx-CWGAYS7s" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="测试,Charles,抓包," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Charles是一个HTTP代理服务器，HTTP监视器，反转代理服务器。它允许一个开发者查看所有连接互联网的HTTP通信，这些包括request, response和HTTP headers （包含cookies与caching信息）。
+百度百科">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Charles 简明实用教程">
+<meta property="og:url" content="https://tyousf.github.io/Charles-简明实用教程/index.html">
+<meta property="og:site_name" content="TyouSF">
+<meta property="og:description" content="Charles是一个HTTP代理服务器，HTTP监视器，反转代理服务器。它允许一个开发者查看所有连接互联网的HTTP通信，这些包括request, response和HTTP headers （包含cookies与caching信息）。
+百度百科">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/charles.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/structure.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/sequence.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set01.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set02.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set03.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set04.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set05.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set06.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set07.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set08.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set09.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set10.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set11.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set12.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set13.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set14.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set15.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set16.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set17.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set18.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set19.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set20.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set21.png">
+<meta property="og:image" content="https://tyousf.github.io/Charles-简明实用教程/set22.png">
+<meta property="og:updated_time" content="2017-06-16T07:48:51.652Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Charles 简明实用教程">
+<meta name="twitter:description" content="Charles是一个HTTP代理服务器，HTTP监视器，反转代理服务器。它允许一个开发者查看所有连接互联网的HTTP通信，这些包括request, response和HTTP headers （包含cookies与caching信息）。
+百度百科">
+<meta name="twitter:image" content="https://tyousf.github.io/Charles-简明实用教程/charles.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tyousf.github.io/Charles-简明实用教程/"/>
+
+
+
+
+
+  <title> Charles 简明实用教程 | TyouSF </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">TyouSF</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">持续不断地学习，是更好的成长---TyouSF</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://tyousf.github.io/Charles-简明实用教程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TyouSF">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TyouSF">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                Charles 简明实用教程
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-24T11:02:32+08:00">
+                2017-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/测试工具/" itemprop="url" rel="index">
+                    <span itemprop="name">测试工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <img src="/Charles-简明实用教程/charles.png" alt="charles.png" title="">
+<blockquote class="blockquote-center"><p>Charles是一个HTTP代理服务器，HTTP监视器，反转代理服务器。它允许一个开发者查看所有连接互联网的HTTP通信，这些包括request, response和HTTP headers （包含cookies与caching信息）。</p>
+<p>百度百科</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="Charles-简述"><a href="#Charles-简述" class="headerlink" title="Charles 简述"></a>Charles 简述</h1><p>Charles 是一款非常强大的 HTTP 调试工具，并且兼容几乎所有的平台，可以让开发人员以及测试人员借此来查看到所有设备与服务器之间的 HTTP 以及 SSL/HTTPS 数据交换过程。</p>
+<p>然而对于国内的使用者来说，美中不足的是：charles 虽然功能强大，但是却是收费的！</p>
+<p>不过这对于我们来说并不是难事，总有办法解决的，你说不是吗？！</p>
+<p>Charles 主要的功能包括：</p>
+<ul>
+<li>截取 Http 和 Https 网络封包。</li>
+<li>支持重发网络请求，方便后端调试。</li>
+<li>支持修改网络请求参数。</li>
+<li>支持网络请求的截获并动态修改。</li>
+<li>支持模拟慢速网络。</li>
+</ul>
+<hr>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>截至本文发布时，当前 Charles 官网最新版本是4.1.2，相信细心的你在篇头的截图中已经观察到了。</p>
+<h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><p><a href="https://www.charlesproxy.com/download/" target="_blank" rel="external">Charles 下载</a></p>
+<p>在下载页面，可根据自己实际的情况下载对应的版本。本教程将不赘述破解过程，主讲解一些实际使用过程中常用的一些技巧，因此当前即使不破解，使用试用也是可以完成相关的操作的。</p>
+<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><p>相信你已经是当今冲锋在互联网浪头的老司机了，这样的基础安装相信已经可以不用多说了，根据自己的需要，一路下一步的安装走起吧。</p>
+<h2 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h2><p>charles抓包的显示，支持两种模式，Structure和Sequence。</p>
+<ol>
+<li><p>Structure形式如下图 优点：可以很清晰的看到请求的数据结构，而且是以域名划分请求信息的，可以很清晰的去分析和处理数据。</p>
+<img src="/Charles-简明实用教程/structure.png" alt="structure.png" title="">
+</li>
+<li><p>Sequence形式如下图 优点：可以看到全部请求，这里的结果以数据请求的顺序来显示，最新的请求显示在最下面。</p>
+<img src="/Charles-简明实用教程/sequence.png" alt="sequence.png" title="">
+</li>
+</ol>
+<p>structure 适合对单一系列的访问请求从宏观上进行把握，可以快速定位。sequence 适合精确定位内容，因为每条sequence 都有size，status等属性信息，方便快速定位这条结果的价值。<br>笔者在实际使用过程中由于经常要查看相应的数据，并且也知道具体的访问请求，因此常用 structure 结果，大家可以根据实际情况进行具体切换即可。</p>
+<hr>
+<h1 id="PC端的使用"><a href="#PC端的使用" class="headerlink" title="PC端的使用"></a>PC端的使用</h1><p><strong>charles会自动配置浏览器和工具的代理设置，所以说打开工具直接就已经是抓包状态了。</strong></p>
+<p>当我们安装完毕启动 charles 时，charles 会进行一些初始化的设定，这个设定我们可以自行在 charles 中根据实际需要来更改，初始的设定下，启动 Charles 后，此时便已经默认监视了 PC 端所有网络数据传输的情况。不信你可以打开 charles 后，使用浏览器访问一些网页，此时这些网页的访问便出现在了 charles 的窗口内。</p>
+<hr>
+<h1 id="移动端使用"><a href="#移动端使用" class="headerlink" title="移动端使用"></a>移动端使用</h1><p>想要抓取移动端应用的接口访问情况，使用 Charles 进行一些简单的设定即可。</p>
+<p>一下便是设定的步骤：</p>
+<ol>
+<li><p>前提：手机和我们使用 charles 的 PC 应当处于同一个局域网内，这是最基本的要求了。即：手机所连接的热点与电脑所连接的路由是同一个即可；</p>
+</li>
+<li><p>进入 charles 的代理设定选项中，允许代理，并设定端口号（一般默认8888），如下图：</p>
+<img src="/Charles-简明实用教程/set01.png" alt="set01.png" title="">
+<img src="/Charles-简明实用教程/set02.png" alt="set02.png" title="">
+</li>
+<li><p>使用 PC 的 cmd 查看本机当前的 ip 地址，然后在手机端的 wifi 代理设置那里去进行相关的配置设置，类似下图：服务器填写 PC 端 ip 地址，端口填写操作2中所设定的代理端口号即可；</p>
+<img src="/Charles-简明实用教程/set03.png" alt="set03.png" title="">
+</li>
+<li><p>手机设定好，连接成功后，charles 页面便会出现一个是否抓取的相关确认弹窗，我们直接选择允许即可，此时使用手机进行的相关访问数据便可以被监听到了。</p>
+</li>
+</ol>
+<p><strong>小提示：</strong><br>为了更方便的查看手机端的抓包情况，可以关闭掉 PC 上的监听。</p>
+<hr>
+<h1 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h1><h2 id="过滤网络请求"><a href="#过滤网络请求" class="headerlink" title="过滤网络请求"></a>过滤网络请求</h2><p>通常情况下，我们需要对网络请求进行过滤，只监控向指定目录服务器上发送的请求。</p>
+<p>方法——</p>
+<ol>
+<li><p>在主界面的中部的 Filter 栏中填入需要过滤出来的关键字。例如我们的服务器的地址是：<a href="http://yourserver.com" target="_blank" rel="external">http://yourserver.com</a> , 那么只需要在 Filter 栏中填入 yourserver 即可。</p>
+</li>
+<li><p>在 Charles 的菜单栏选择 “Proxy”-&gt;”Recording Settings” 中选择添加一个项目，然后填入需要监控的协议，主机地址，端口号。如下图：</p>
+<img src="/Charles-简明实用教程/set04.png" alt="set04.png" title="">
+<img src="/Charles-简明实用教程/set05.png" alt="set05.png" title="">
+</li>
+<li><p>在想过滤的网络请求上右击，选择 “Focus”，可以临时性的，快速地过滤出一些没有通过关键字的一类网络请求。</p>
+</li>
+</ol>
+<h2 id="截取-Https-通讯信息"><a href="#截取-Https-通讯信息" class="headerlink" title="截取 Https 通讯信息"></a>截取 Https 通讯信息</h2><p>通常情况下，如果是测试环境，为了方便测试，多数情况下是没有加密的网络通信，使用 Charles 可以直接抓取到相关的通讯信息，但是正式环境就不行了，没有相关的证书我们也只是能看到访问的地址，而交互的数据等我们是无法查看的。</p>
+<p>如果你需要截取分析 Https 协议相关的内容。那么需要安装 Charles 的 CA 证书。具体步骤如下：</p>
+<ol>
+<li><p>点击 Charles 的顶部菜单，选择 “Help” -&gt; “SSL Proxying” -&gt; “Install Charles Root Certificate” 进行证书安装：</p>
+<img src="/Charles-简明实用教程/set06.png" alt="set06.png" title="">
+</li>
+<li><p>Charles 默认也并不截取 Https 网络通讯的信息，如果你想对截取某个网站上的所有 Https 网络请求，可以在该请求上右击，选择 enable SSL proxy，如下图所示：</p>
+<img src="/Charles-简明实用教程/set07.png" alt="set07.png" title="">
+</li>
+</ol>
+<h2 id="截取移动设备中的-Https-通讯信息"><a href="#截取移动设备中的-Https-通讯信息" class="headerlink" title="截取移动设备中的 Https 通讯信息"></a>截取移动设备中的 Https 通讯信息</h2><p>如果我们需要在 iOS 或 Android 机器上截取 Https 协议的通讯内容，还需要在手机上安装相应的证书。</p>
+<ol>
+<li><p>点击 Charles 的顶部菜单，选择 “Help” -&gt; “SSL Proxying” -&gt; “Install Charles Root Certificate on a Mobile Device or Remote Browser”</p>
+<img src="/Charles-简明实用教程/set08.png" alt="set08.png" title="">
+</li>
+<li><p>在设备上设置好 Charles 为代理后，在手机浏览器中访问地址：<a href="http://charlesproxy.com/getssl" target="_blank" rel="external">http://charlesproxy.com/getssl</a> ，即可打开证书安装的界面，安装完证书后，就可以截取手机上的 Https 通讯内容了。</p>
+</li>
+</ol>
+<p><strong>注意：</strong><br>默认情况下 Charles 并不做截取，你还需要在要截取的网络请求上右击，选择 SSL proxy 菜单项。</p>
+<h2 id="模拟慢速网络"><a href="#模拟慢速网络" class="headerlink" title="模拟慢速网络"></a>模拟慢速网络</h2><p>在测试过程中，我们也通常会模拟用户真实的 3G， 4G 甚至是 2G 的网络环境下我们应用的真实反馈情况等等，Charles 对此需求提供了很好的支持。</p>
+<p>在 Charles 的菜单上，选择 “Proxy”-&gt;“Throttle Setting” 项，在之后弹出的对话框中，我们可以勾选上 “Enable Throttling”，并且可以设置 Throttle Preset 的类型。如下图所示：<br><img src="/Charles-简明实用教程/set09.png" alt="set09.png" title=""><br><img src="/Charles-简明实用教程/set10.png" alt="set10.png" title=""></p>
+<p><strong>小提示</strong>：<br>如果我们只想模拟指定网站的慢速网络，可以再勾选上图中的 “Only for selected hosts” 项，然后在对话框的下半部分设置中增加指定的 hosts 项即可。</p>
+<h2 id="修改网络请求内容"><a href="#修改网络请求内容" class="headerlink" title="修改网络请求内容"></a>修改网络请求内容</h2><p>有些时候为了调试服务器的接口，我们需要反复尝试不同参数的网络请求。Charles 可以方便地提供网络请求的修改和重发功能。</p>
+<ol>
+<li><p>对于以往的网络请求上点击右键，选择 “Compose”，即可创建一个可编辑的网络请求。如下所示：</p>
+<img src="/Charles-简明实用教程/set11.png" alt="set11.png" title="">
+</li>
+<li><p>新建一个自定义的请求，可以在 “Tools”-&gt;“Compose a new request” 或中进行设置：</p>
+<img src="/Charles-简明实用教程/set12.png" alt="set12.png" title="">
+</li>
+</ol>
+<p>有了请求后，们可以修改该请求的任何信息，包括 URL 地址、端口、参数等，之后点击 “Execute” 即可发送该修改后的网络请求。 Charles 支持我们多次修改和发送该请求，这对于我们和服务器端调试接口非常方便。</p>
+<h2 id="给服务器做压力测试"><a href="#给服务器做压力测试" class="headerlink" title="给服务器做压力测试"></a>给服务器做压力测试</h2><p>我们可以使用 Charles 的 Repeat 功能来简单地测试服务器的并发处理能力，方法如下。<br>我们在想打压的网络请求上（POST 或 GET 请求均可）右击，然后选择 「Repeat Advanced」菜单项，如下所示：<br><img src="/Charles-简明实用教程/set13.png" alt="set13.png" title=""></p>
+<p>接着我们就可以在弹出的对话框中，选择打压的并发线程数以及打压次数，确定之后，即可开始打压。</p>
+<img src="/Charles-简明实用教程/set14.png" alt="set14.png" title="">
+<h2 id="修改服务器返回内容"><a href="#修改服务器返回内容" class="headerlink" title="修改服务器返回内容"></a>修改服务器返回内容</h2><p>有些时候我们想让服务器返回一些指定的内容，方便我们调试一些特殊情况。例如列表页面为空的情况，数据异常的情况，部分耗时的网络请求超时的情况等。如果没有 Charles，要服务器配合构造相应的数据显得会比较麻烦。这个时候，使用 Charles 相关的功能就可以满足我们的需求。</p>
+<p>根据具体的需求，Charles 提供了 Map 功能、 Rewrite 功能以及 Breakpoints 功能，都可以达到修改服务器返回内容的目的。这三者在功能上的差异是：</p>
+<ul>
+<li>Map 功能适合长期地将某一些请求重定向到另一个网络地址或本地文件。</li>
+<li>Rewrite 功能适合对网络请求进行一些正则替换。</li>
+<li>Breakpoints 功能适合做一些临时性的修改。</li>
+</ul>
+<h3 id="Map-功能"><a href="#Map-功能" class="headerlink" title="Map 功能"></a>Map 功能</h3><p>Charles 的 Map 功能分 Map Remote 和 Map Local 两种，顾名思义，Map Remote 是将指定的网络请求重定向到另一个网址请求地址，Map Local 是将指定的网络请求重定向到本地文件。</p>
+<p>在 Charles 的菜单中，选择 “Tools”-&gt;”Map Remote” 或 “Map Local” 即可进入到相应功能的设置页面。<br><img src="/Charles-简明实用教程/set15.png" alt="set15.png" title=""></p>
+<p>对于 Map Remote 功能，我们需要分别填写网络重定向的源地址和目的地址，对于不需要限制的条件，可以留空。下图是一个示例，我将所有 testserver.com（测试服务器）的请求重定向到了 www.releaseserver.com（线上服务器）。<br><img src="/Charles-简明实用教程/set16.png" alt="set16.png" title=""></p>
+<p>对于 Map Local 功能，我们需要填写的重定向的源地址和本地的目标文件。对于有一些复杂的网络请求结果，我们可以先使用 Charles 提供的 “Save Response…” 功能，将请求结果保存到本地（如下图所示），然后稍加修改，成为我们的目标映射文件。<br><img src="/Charles-简明实用教程/set17.png" alt="set17.png" title=""></p>
+<p>下图是一个示例，我将一个指定的网络请求通过 Map Local 功能映射到了本地的一个经过修改的文件中。<br><img src="/Charles-简明实用教程/set18.png" alt="set18.png" title=""></p>
+<p>Map Local 在使用的时候，有一个潜在的问题，就是其返回的 Http Response Header 与正常的请求并不一样。这个时候如果客户端校验了 Http Response Header 中的部分内容，就会使得该功能失效。解决办法是同时使用 Map Local 以下面提到的 Rewrite 功能，将相关的 Http 头 Rewrite 成我们希望的内容。</p>
+<h3 id="Rewrite-功能"><a href="#Rewrite-功能" class="headerlink" title="Rewrite 功能"></a>Rewrite 功能</h3><p>Rewrite 功能功能适合对某一类网络请求进行一些正则替换，以达到修改结果的目的。<br>例如，我们的客户端有一个 API 请求是获得用户昵称，而我当前的昵称是 “tangqiaoboy”，如下所示：<br><img src="/Charles-简明实用教程/set19.png" alt="set19.png" title=""></p>
+<p>我们想试着直接修改网络返回值，将 tangqiaoboy 换成成 iosboy。于是我们启用 Rewrite 功能，然后设置如下的规则：<br><img src="/Charles-简明实用教程/set20.png" alt="set20.png" title=""></p>
+<p>完成设置之后，我们就可以从 Charles 中看到，之后的 API 获得的昵称被自动 Rewrite 成了 iosboy，如下图所示：<br><img src="/Charles-简明实用教程/set21.png" alt="set21.png" title=""></p>
+<h3 id="Breakpoints-功能"><a href="#Breakpoints-功能" class="headerlink" title="Breakpoints 功能"></a>Breakpoints 功能</h3><p>上面提供的 Rewrite 功能最适合做批量和长期的替换，但是很多时候，我们只是想临时修改一次网络请求结果，这个时候，使用 Rewrite 功能虽然也可以达到目的，但是过于麻烦，对于临时性的修改，我们最好使用 Breakpoints 功能。<br>Breakpoints 功能类似代码调试时的断点一样，当指定的网络请求发生时，Charles 会截获该请求，这个时候，我们可以在 Charles 中临时修改网络请求的返回内容。<br>下图是我们临时修改获取用户信息的 API，将用户的昵称进行了更改，修改完成后点击 “Execute” 则可以让网络请求继续进行。<br><img src="/Charles-简明实用教程/set22.png" alt="set22.png" title=""></p>
+<div class="note danger"><p><strong>注意点</strong>：</p>
+</div>
+<p>使用 Breakpoints 功能将网络请求截获并修改过程中，整个网络请求的计时并不会暂停，所以长时间的暂停可能导致客户端的请求超时。</p>
+<hr>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>关于 Charles 的简明实用教程，目前就先写这么多吧，希望在以后的实际使用过程中，大家通过不断的练习和使用，早日成为老司机。</p>
+<p>让我们一起共勉：</p>
+<blockquote>
+<p>持续不断地学习，是更好的成长 —TyouSF</p>
+</blockquote>
+<hr>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><hr>
+<blockquote>
+<p><a href="https://www.charlesproxy.com/" target="_blank" rel="external">Charles 官网</a><br><a href="https://www.charlesproxy.com/documentation/" target="_blank" rel="external">Charles 官网文档</a></p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      TyouSF
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://tyousf.github.io/Charles-简明实用教程/" title="Charles 简明实用教程">https://tyousf.github.io/Charles-简明实用教程/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/测试/" rel="tag"># 测试</a>
+          
+            <a href="/tags/Charles/" rel="tag"># Charles</a>
+          
+            <a href="/tags/抓包/" rel="tag"># 抓包</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Python3-类/" rel="next" title="Python3 类">
+                <i class="fa fa-chevron-left"></i> Python3 类
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yNzk5NC80NTcx"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="TyouSF" />
+          <p class="site-author-name" itemprop="name">TyouSF</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/TyouSF" target="_blank" title="GitHub" rel="external nofollow">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Charles-简述"><span class="nav-number">1.</span> <span class="nav-text">Charles 简述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载地址"><span class="nav-number">2.1.</span> <span class="nav-text">下载地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装过程"><span class="nav-number">2.2.</span> <span class="nav-text">安装过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#界面"><span class="nav-number">2.3.</span> <span class="nav-text">界面</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PC端的使用"><span class="nav-number">3.</span> <span class="nav-text">PC端的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#移动端使用"><span class="nav-number">4.</span> <span class="nav-text">移动端使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技巧"><span class="nav-number">5.</span> <span class="nav-text">技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#过滤网络请求"><span class="nav-number">5.1.</span> <span class="nav-text">过滤网络请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#截取-Https-通讯信息"><span class="nav-number">5.2.</span> <span class="nav-text">截取 Https 通讯信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#截取移动设备中的-Https-通讯信息"><span class="nav-number">5.3.</span> <span class="nav-text">截取移动设备中的 Https 通讯信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模拟慢速网络"><span class="nav-number">5.4.</span> <span class="nav-text">模拟慢速网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改网络请求内容"><span class="nav-number">5.5.</span> <span class="nav-text">修改网络请求内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给服务器做压力测试"><span class="nav-number">5.6.</span> <span class="nav-text">给服务器做压力测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改服务器返回内容"><span class="nav-number">5.7.</span> <span class="nav-text">修改服务器返回内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Map-功能"><span class="nav-number">5.7.1.</span> <span class="nav-text">Map 功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rewrite-功能"><span class="nav-number">5.7.2.</span> <span class="nav-text">Rewrite 功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Breakpoints-功能"><span class="nav-number">5.7.3.</span> <span class="nav-text">Breakpoints 功能</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">6.</span> <span class="nav-text">结语</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TyouSF</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" rel="external nofollow">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
