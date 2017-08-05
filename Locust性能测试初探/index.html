@@ -96,9 +96,8 @@
 <meta property="og:url" content="https://tyousf.github.io/Locust性能测试初探/index.html">
 <meta property="og:site_name" content="TyouSF">
 <meta property="og:description" content="An open source load testing tool. Define user behaviour with Python code, and swarm your system with millions of simultaneous users. –Locust">
-<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://tyousf.github.io/Locust性能测试初探/locust.png">
-<meta property="og:updated_time" content="2017-08-04T11:10:04.000Z">
+<meta property="og:updated_time" content="2017-08-05T02:44:14.690Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Locust性能测试初探">
 <meta name="twitter:description" content="An open source load testing tool. Define user behaviour with Python code, and swarm your system with millions of simultaneous users. –Locust">
@@ -409,6 +408,87 @@
 <p>–Locust</p>
 </blockquote>
 <a id="more"></a>
+<h1 id="前述"><a href="#前述" class="headerlink" title="前述"></a>前述</h1><hr>
+<p>到目前为止，对于性能测试的实践其实也并不是很多。为了弥补这片空白，也是各种找资料学习。<br>网上关于性能测试资料最多的，其实大家一搜索便知道一二，其中：</p>
+<ol>
+<li>loadrunner</li>
+<li>Jmeter</li>
+</ol>
+<p>这两款工具也是目前能够检索到相关资料较多的测试工具，这两者的区别也很明显：</p>
+<ol>
+<li>loadrunner 是一款商用软件，需要收费，相比之下，Jmeter 则是开源免费的</li>
+<li>二者的并发机制有所不同，想更深入的同学可自行了解，此处不多述</li>
+</ol>
+<h2 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h2><p>引用百度的介绍————</p>
+<blockquote>
+<p>性能测试是通过自动化的测试工具模拟多种正常、峰值以及异常负载条件来对系统的各项性能指标进行测试。负载测试和压力测试都属于性能测试，两者可以结合进行。通过负载测试，确定在各种工作负载下系统的性能，目标是测试当负载逐渐增加时，系统各项性能指标的变化情况。压力测试是通过确定一个系统的瓶颈或者不能接受的性能点，来获得系统能提供的最大服务级别的测试。</p>
+</blockquote>
+<h2 id="Locust的发现"><a href="#Locust的发现" class="headerlink" title="Locust的发现"></a>Locust的发现</h2><p>由于自己也想更多的弥补这方面的空白，因为在调查性能测试工具的过程中，无意间发现了 Locust 这样一个开源的框架，<br>进一步仔细看后，发现 Locust 使用的是 python 语言编程实现的，恰巧本小白现在也刚好正在主要使用 python，因此<br>二话不说，就学起来，重点是：Locust 也是免费开源的啊，而且目前国内对其的了解和使用也相对较少，说不定以后小白<br>就走在了国内的前沿了呢，有木有很厉害，那就赶紧跟我一起学起来吧！！！</p>
+<hr>
+<h1 id="Locust-初探"><a href="#Locust-初探" class="headerlink" title="Locust 初探"></a>Locust 初探</h1><hr>
+<p>以下内容其实也纯属搬砖，为什么这么说呢，因为这些都源自官方文档，没有耐心看英文，想要快速一睹 Locust 真面目的<br>不妨就来看看，让我们快速窥探 Locust 吧。</p>
+<h2 id="Locust-安装"><a href="#Locust-安装" class="headerlink" title="Locust 安装"></a>Locust 安装</h2><p>整个安装和检测等，都是在 python shell 下完成的：</p>
+<ul>
+<li><p>在 python shell 命令下，使用 pip 完成快速安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install locustio</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装完成后，检测是否安装成功：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">locust --help</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果你想使用 locust 更为强大的分布式性能测试，那么还需要安装 <code>pyzmq</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install pyzmq</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>操作系统不同，安装的方式有所不同，并且安装后可能都会遇到一些问题，请详细查看下方内容，减少走弯路。</p>
+<h4 id="当前版本的问题"><a href="#当前版本的问题" class="headerlink" title="当前版本的问题"></a>当前版本的问题</h4><ul>
+<li><code>ModuleNotFoundError: No module named &#39;core&#39;</code> 的错误</li>
+</ul>
+<p>当前情况下，无论是在 windows，还是 linux/macos，在当前的 locust 版本下，安装后，可能存在无法使用的问题，<br>这个问题是在使用 <code>locust --help</code> 会提示 <code>ModuleNotFoundError: No module named &#39;core&#39;</code> 的错误，这种<br>问题是当前 locust 的一个 bug， 在 locust git项目中，可以查到相应的解决方案，遇到此问题，解决方式是：</p>
+<ol>
+<li><code>pip uninstall locustio</code> 先卸载安装的 locust</li>
+<li><code>pip install locustio==0.8a2</code> 使用新的安装命令安装</li>
+<li><code>locust -f locustfile.py</code> 再次检测，会发现，已经解决了问题 ✌</li>
+</ol>
+<ul>
+<li>Windows 平台下安装的问题</li>
+</ul>
+<p>从官方文档中，很清楚的提及操作系统的问题，官方推荐是建议在 Linux/Mac OS 上使用，其中原因是对于操作系统内核<br>的使用兼容上。<br>因此，在 Win 平台下安装，会遇到安装失败的问题，通常是需要安装 <code>Visual C++</code> 的。因此安装前请确认 Visual C++<br>各系列是或否都已经安装。</p>
+<p>如果不确定，那么久按照失败的提示，访问 Visual C++ 官网 <a href="http://landinghub.visualstudio.com/visual-cpp-build-tools" target="_blank" rel="external">Visual C++</a> 下载安装</p>
+<p>安装后再使用上述安装命令就可以发现，安装OK ✌ 了</p>
+<h2 id="Locust-快速示例"><a href="#Locust-快速示例" class="headerlink" title="Locust 快速示例"></a>Locust 快速示例</h2><p>根据官方文档，快速示例有两种写法，区别是在于对于用户行为定义的两种不同形式，一种是采用 tasks 参数，指定用户行为；一种是采用 @task 装饰器，在用户行为类内部定义。</p>
+<ol>
+<li><p>第一种，单独定义行为函数，采用 tasks</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">from locust import HttpLocust, TaskSet</div><div class="line"></div><div class="line">def login(l):</div><div class="line">    l.client.post(&quot;/login&quot;, &#123;&quot;username&quot;:&quot;ellen_key&quot;, &quot;password&quot;:&quot;education&quot;&#125;)</div><div class="line"></div><div class="line">def index(l):</div><div class="line">    l.client.get(&quot;/&quot;)</div><div class="line"></div><div class="line">def profile(l):</div><div class="line">    l.client.get(&quot;/profile&quot;)</div><div class="line"></div><div class="line">class UserBehavior(TaskSet):</div><div class="line">    tasks = &#123;index: 2, profile: 1&#125;</div><div class="line"></div><div class="line">    def on_start(self):</div><div class="line">        login(self)</div><div class="line"></div><div class="line">class WebsiteUser(HttpLocust):</div><div class="line">    task_set = UserBehavior</div><div class="line">    min_wait = 5000</div><div class="line">    max_wait = 9000</div></pre></td></tr></table></figure>
+</li>
+<li><p>行为类内部，采用 @task 装饰器定义</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">from locust import HttpLocust, TaskSet, task</div><div class="line"></div><div class="line">class UserBehavior(TaskSet):</div><div class="line">    def on_start(self):</div><div class="line">        &quot;&quot;&quot; on_start is called when a Locust start before any task is scheduled &quot;&quot;&quot;</div><div class="line">        self.login()</div><div class="line"></div><div class="line">    def login(self):</div><div class="line">        self.client.post(&quot;/login&quot;, &#123;&quot;username&quot;:&quot;ellen_key&quot;, &quot;password&quot;:&quot;education&quot;&#125;)</div><div class="line"></div><div class="line">    @task(2)</div><div class="line">    def index(self):</div><div class="line">        self.client.get(&quot;/&quot;)</div><div class="line"></div><div class="line">    @task(1)</div><div class="line">    def profile(self):</div><div class="line">        self.client.get(&quot;/profile&quot;)</div><div class="line"></div><div class="line">class WebsiteUser(HttpLocust):</div><div class="line">    task_set = UserBehavior</div><div class="line">    min_wait = 5000</div><div class="line">    max_wait = 9000</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>二者无论采用哪种，都是一样的，但是官方推荐使用的是 @task 装饰器的形式。</p>
+<h2 id="启动运行"><a href="#启动运行" class="headerlink" title="启动运行"></a>启动运行</h2><p>如果上述脚本的名称为 “locustfile.py” 那么我们便可以直接运行如下命令，启动脚本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">locust --host=http://example.com</div></pre></td></tr></table></figure></p>
+<p>如果脚本名称不是 locust 默认支持的，那么运行的时候也需要指定脚本文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">locust -f locust_files/my_locust_file.py --host=http://example.com</div></pre></td></tr></table></figure></p>
+<h2 id="访问-locust-网页"><a href="#访问-locust-网页" class="headerlink" title="访问 locust 网页"></a>访问 locust 网页</h2><p>成功启动可以到如下的命令提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Starting web monitor at *:8089</div><div class="line">Starting Locust 0.8a2</div></pre></td></tr></table></figure></p>
+<p>通过如下地址即可访问：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://localhost:8089/</div></pre></td></tr></table></figure></p>
+<p>打开 locust 实时监控的页面后，我们首先需要操作的便是配置：</p>
+<ul>
+<li>并发用户数</li>
+<li>产生模拟用户的速度</li>
+</ul>
+<p>配置后，即可进入实时监控页面，看到各个响应的性能指标等</p>
+<hr>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><hr>
+<p>相信通过上述的内容，小伙伴们都已经掌握了基本的 locust 的使用，接下来的内容中我们将逐一介绍 locust 中各个属性以及类的的特性和使用。</p>
+<hr>
+<p>让我们一起共勉：</p>
+<blockquote>
+<p>持续不断地学习，是更好的成长 —TyouSF</p>
+</blockquote>
+<hr>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><hr>
+<blockquote>
+<p><a href="http://locust.io/" target="_blank" rel="external">Locust 官网</a><br><a href="http://docs.locust.io/en/latest/installation.html" target="_blank" rel="external">Locust 官方文档</a><br><a href="http://debugtalk.com/tags/Locust/" target="_blank" rel="external">Locust 其他参考</a><br><a href="https://github.com/locustio/locust" target="_blank" rel="external">Locust Git项目</a></p>
+</blockquote>
+
       
     </div>
 
@@ -526,8 +606,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -600,6 +689,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前述"><span class="nav-number">1.</span> <span class="nav-text">前述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#性能测试"><span class="nav-number">1.1.</span> <span class="nav-text">性能测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Locust的发现"><span class="nav-number">1.2.</span> <span class="nav-text">Locust的发现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Locust-初探"><span class="nav-number">2.</span> <span class="nav-text">Locust 初探</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Locust-安装"><span class="nav-number">2.1.</span> <span class="nav-text">Locust 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">2.1.1.</span> <span class="nav-text">注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#当前版本的问题"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">当前版本的问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Locust-快速示例"><span class="nav-number">2.2.</span> <span class="nav-text">Locust 快速示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动运行"><span class="nav-number">2.3.</span> <span class="nav-text">启动运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问-locust-网页"><span class="nav-number">2.4.</span> <span class="nav-text">访问 locust 网页</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
